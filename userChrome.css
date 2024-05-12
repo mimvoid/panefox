@@ -1,0 +1,159 @@
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/window_control_placeholder_support.css);
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/window_control_force_linux_system_style.css);
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/round_ui_items.css);
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/rounded_menupopups.css);
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/browser-rounded.css);
+@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/hide_tabs_toolbar.css);
+
+/* ~~~~~ WINDOWS CONTROLS ~~~~~ */
+
+/* Shrinks space for windows controls from default */
+:root:is([tabsintitlebar], [sizemode="fullscreen"]) {
+  --uc-window-control-width: 72px !important;
+}
+
+/* ~~~~~ ROUND UI ~~~~~ */
+
+/* Adjusts radius of round UI */
+:root{ --toolbarbutton-border-radius: 10px !important }
+#urlbar-input-container > box:hover,
+#urlbar-input-container > box[open],
+#main-menubar >  menu,
+.titlebar-button:hover,
+#scrollbutton-up,
+#scrollbutton-down,
+.tab-close-button,
+.close-icon > image,
+#page-action-buttons > :hover,
+.panel-arrowcontent,
+.urlbarView-row-inner,
+.search-one-offs button,
+.subviewbutton-back,
+.toolbaritem-combined-buttons > toolbarbutton,
+#PopupSearchAutoComplete,
+menupopup{ border-radius: var(--toolbarbutton-border-radius) !important }
+
+button,
+.tab-background{ border-radius: var(--toolbarbutton-border-radius) !important; }
+
+/* Adjusts radius of menu popups */
+:root{ --uc-menupopup-border-radius: var(--toolbarbutton-border-radius) }
+
+/* Rounds the sidebar */
+#sidebar-box, #sidebar {
+    border-radius: var(--toolbarbutton-border-radius) !important;
+}
+
+/* Rounds the status bar */
+#statuspanel-label {
+    border-radius: 4px;
+}
+
+/* Returns the default lack of browser margins */
+#tabbrowser-tabpanels {
+    browser[type="content"] {
+        margin: 0px !important;
+/*      margin-left: 2px;
+        margin-bottom: 6px;
+        margin-right: 0px;
+        padding-right: 4px; */
+    }
+}
+
+/* ~~~~~ TOOLBAR ~~~~~ */
+
+/* Removes borders, slightly increases margins to compensate */
+toolbox {
+    border: 0px !important;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Lightens and slightly spaces out identity boxes */
+box#identity-icon-box, box#identity-permission-box {
+    opacity: 0.75;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+}
+
+
+
+/* ~~~~~ BOOKMARKS BAR ~~~~~ */
+
+/* Hides bookmark text */
+#PersonalToolbar #import-button > .toolbarbutton-text, .bookmark-item {
+    opacity: 0.75;
+    margin-left: 2px;
+    margin-right: 2px;
+    > .toolbarbutton-text {
+        display: none !important;
+    }
+}
+
+/* Centers bookmarks */
+#PlacesToolbarItems {
+    justify-content: safe center !important;
+}
+
+
+/* ~~~~~ SIDEBAR ~~~~~ */
+
+/* Allows more shrinking of the sidebar, and adds a little margin */
+#sidebar-box {
+    min-width: 36px !important;
+    margin-bottom: 6px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+/* Switches padding to margin to keep the sidebar's rounding with bookmarks visible */
+:root[BookmarksToolbarOverlapsBrowser] {
+    .newTabBrowserPanel,
+    #sidebar-box {
+        padding-top: 0px !important;
+        margin-top: var(--bookmarks-toolbar-overlapping-browser-height);
+    }
+}
+
+/* Adjusts the sidebar header */
+#sidebar-header {
+    /* font-size: 14px !important; */
+    opacity: 0.75 !important;
+    margin-bottom: 12px !important;
+}
+#sidebar-switcher-target {
+    margin-left: -4px !important;
+}
+
+/* Shrinks the sidebar splitter */
+.sidebar-splitter {
+    border: 0 !important;
+    width: 2px !important;
+    opacity: 0.01;
+}
+
+/* Hides close button & title */
+.close-icon {
+    visibility: hidden;
+}
+#sidebar-title {
+    display: none !important;
+}
+#sidebar-switcher-arrow {
+    display: none !important;
+}
+
+/* Lightens sidebar icons */
+#sidebar-icon {
+    opacity: 0.75;
+}
+
+/* ~~~~~ STATUS BAR ~~~~~ */
+
+#statuspanel {
+    opacity: 0.85 !important;
+}
+
+#statuspanel-label {
+    border: 0 !important;
+}
