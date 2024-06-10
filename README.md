@@ -12,7 +12,10 @@ Night mode theme: [Catppuccin Macchiato - Maroon](https://github.com/catppuccin/
 
 This is my little Firefox CSS config included within my [NixOS and Home Manager configuration](https://github.com/mimvoid/nix-config).
 
-Start page is [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/)
+
+Vertical tabs: [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/)
+
+Start page: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/)
 - Display: [Limelight Regular](https://fonts.google.com/specimen/Limelight)
 - Monospace: [SauceCodePro Nerd Font](https://www.nerdfonts.com/)
 
