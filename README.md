@@ -6,7 +6,7 @@ Light mode theme: Incandescent (made in [Firefox Color](https://addons.mozilla.o
 
 ![panefox-night.png](https://github.com/mimvoid/panefox/assets/153698678/25042ed7-44df-45ae-857e-d05c7513bb57)
 
-Night mode theme: [Catppuccin Macchiato - Maroon](https://github.com/catppuccin/firefox)
+Dark mode theme: [Catppuccin Macchiato - Maroon](https://github.com/catppuccin/firefox)
 
 ***
 
