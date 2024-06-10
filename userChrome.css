@@ -1,175 +1,33 @@
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/window_control_placeholder_support.css);
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/window_control_force_linux_system_style.css);
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/round_ui_items.css);
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/rounded_menupopups.css);
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/browser-rounded.css);
-@import url(/home/zinnia/.mozilla/firefox/pjgsti3y.default-release/chrome/hide_tabs_toolbar.css);
+@import url("./extras/round_ui_items.css");
+@import url("./extras/rounded_menupopups.css");
+@import url("./extras/hide_tabs_toolbar.css");
+@import url("./extras/browser-rounded.css");
+
+@import url("./userChrome/bookmarks-bar.css");
+@import url("./userChrome/round-ui.css");
+@import url("./userChrome/sidebar.css");
+@import url("./userChrome/status.css");
+@import url("./userChrome/toolbox.css");
+
+/* To return window controls, add:
+ * @import url("./firefox-css/window_control_placeholder_support.css");
+ */
+
+/* For Linux, you can also add:
+ * @import url("./firefox-css/window_control_force_linux_system_style.css");
+ */
 
 
-/* ~~~~~ WINDOWS CONTROLS ~~~~~ */
+/* Windows Controls */
 
-/* Shrinks space for windows controls */
-:root:is([tabsintitlebar], [sizemode="fullscreen"]) {
-    --uc-window-control-width: 72px !important;
-}
+/* Shrinks space occupied by windows controls
+ * Use if you returned window controls
+ * :root:is([tabsintitlebar], [sizemode="fullscreen"]) {
+ *   --uc-window-control-width: 72px !important;
+ * }
+ */
 
-
-/* ~~~~~ ROUND UI ~~~~~ */
-
-/* Adjusts radius of round UI */
-:root{ --toolbarbutton-border-radius: 10px !important }
-
-/* URL & menu bar */
-#urlbar-input-container > box:hover,
-#urlbar-input-container > box[open],
-#main-menubar > menu,
-/* Buttons */
-.titlebar-button:hover,
-#scrollbutton-up,
-#scrollbutton-down,
-.tab-close-button,
-.close-icon > image,
-#page-action-buttons > :hover,
-.panel-arrowcontent,
-.urlbarView-row-inner,
-.search-one-offs button,
-.subviewbutton-back,
-.toolbaritem-combined-buttons > toolbarbutton,
-/* Popup menus */
-#PopupSearchAutoComplete,
-menupopup,
-/* Misc? */
-button,
-.tab-background {
-    border-radius: var(--toolbarbutton-border-radius) !important;
-}
-
-/* Adjusts radius of menu popup variable */
-:root{ --uc-menupopup-border-radius: var(--toolbarbutton-border-radius) }
-
-/* Rounds the sidebar */
-#sidebar-box, #sidebar {
-    border-radius: var(--toolbarbutton-border-radius) !important;
-}
-
-/* Rounds the status panel */
-#statuspanel-label {
-    border-radius: 4px;
-}
-
-/* Returns the default lack of browser margins
- * Adjusts browser background, which only shows when no content's loaded */
-#tabbrowser-tabpanels {
-    browser[type="content"] {
-        margin: 0px !important;
-        background-color: color-mix(in srgb, currentColor 2%, transparent) !important;
-    }
-}
-
-
-/* ~~~~~ TOOLBAR ~~~~~ */
-
-/* Removes borders, increases margins to compensate */
-toolbox {
-    border: 0px !important;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-/* Lightens and spaces out identity boxes */
-#identity-box {
-    font-size: small;
-    opacity: 0.6;
-}
-#identity-icon-box, #identity-permission-box {
-    margin-left: 1px !important;
-    margin-right: 1px !important;
-}
-
-
-/* ~~~~~ BOOKMARKS BAR ~~~~~ */
-
-#PlacesToolbarItems {
-    /* Centers bookmarks */
-    justify-content: safe center !important;
-    
-    /* Makes transleucent & spaces out bookmark icons */
-    > .bookmark-item {
-        opacity: 0.75;
-        margin-left: 2px;
-        margin-right: 2px;
-        
-    /* Hides bookmark text */
-    > .toolbarbutton-text { display: none !important; }
-    }
-}
-
-/* For other bookmarks, makes icon transleucent & hides text */
-#OtherBookmarks {
-    opacity: 0.75;
-    > .toolbarbutton-text { display: none !important; }
-}
-
-
-/* ~~~~~ SIDEBAR ~~~~~ */
-
-/* Allows more shrinking, adds a little margin, colors it */
-#sidebar-box {
-    min-width: 36px !important;
-    margin-left: 4px !important;
-    margin-right: 4px !important;
-    background-color: var(--toolbar-bgcolor) !important;
-    container-type: inline-size;
-}
-
-/* Switches padding to margin to keep the sidebar's rounding when bookmark bar is visible */
-:root[BookmarksToolbarOverlapsBrowser] {
-    .newTabBrowserPanel,
-    #sidebar-box {
-        padding-top: 0px !important;
-        margin-top: var(--bookmarks-toolbar-overlapping-browser-height);
-    }
-}
-
-/* Adjusts the sidebar header */
-#sidebar-header {
-    opacity: 0.75 !important;
-    margin-bottom: 12px !important;
-    
-    > #sidebar-switcher-target {
-        margin-left: -4px !important;
-        > #sidebar-icon { margin-right: 4px; }
-        > #sidebar-title { font-size: 14px; }
-    }
-}
-
-/* Hides sidebar title and switcher arrow according to sidebar width */
-@container (max-width: 84px) {
-    #sidebar-switcher-arrow { visibility: hidden; }
-}
-@container (max-width: 72px) {
-    #sidebar-title { visibility: hidden; }
-}
-
-/* Shrinks the sidebar splitter */
-.sidebar-splitter {
-    border: 0 !important;
-    width: 2px !important;
-    opacity: 0.01;
-}
-
-/* Hides close button */
-.close-icon {
-    visibility: hidden;
-}
-
-
-/* ~~~~~ STATUS PANEL ~~~~~ */
-
-/* Makes status panel transleucent */
-#statuspanel {
-    opacity: 0.85 !important;
-    
-    /* Removes border */
-    > #statuspanel-label { border: 0 !important; }
+/* Completely hides windows controls */
+.titlebar-min, .titlebar-restore, .titlebar-close {
+    display: none !important;
 }
