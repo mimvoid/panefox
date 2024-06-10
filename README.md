@@ -16,6 +16,7 @@ This is my little Firefox CSS config included within my [NixOS and Home Manager 
 Vertical tabs: [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/)
 
 Start page: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/)
+- Background: [Clouds](https://www.milkgrrl.com/portfolio?pgid=jja9jy5o-49abe1d5-7966-40a7-a66d-a163695ce767) by [milkgrrl / Shari Coté](https://www.milkgrrl.com/home)
 - Display: [Limelight Regular](https://fonts.google.com/specimen/Limelight)
 - Monospace: [SauceCodePro Nerd Font](https://www.nerdfonts.com/)
 
