@@ -55,6 +55,7 @@ button,
 #tabbrowser-tabpanels {
     browser[type="content"] {
         margin: 0px !important;
+        border-bottom-right-radius: 0 !important;
         background-color: color-mix(in srgb, currentColor 2%, transparent) !important;
     }
 }
