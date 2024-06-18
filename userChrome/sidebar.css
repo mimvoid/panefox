@@ -1,3 +1,5 @@
+/* Main sidebar appearance */
+
 /* Allows more shrinking of the sidebar,
  * adds a little margin,
  * and colors it */
@@ -22,7 +24,7 @@
 /* Adjusts the sidebar header */
 #sidebar-header {
   opacity: 0.75 !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 4px !important;
     
   > #sidebar-switcher-target {
     margin-left: -4px !important;
@@ -48,8 +50,29 @@
   opacity: 0.01;
 }
 
+/* Hides sidebar scrollbar */
+.hidevscroll-scrollbar {
+  display: none;
+}
+
 /* Hides close button */
 /* Don't use display: none or the other ui elements will shift */
 .close-icon {
   visibility: hidden;
+}
+
+
+/* Sidebar content */
+
+.sidebar-placesTree {
+  /* Decreases indentation */
+  treechildren::-moz-tree-indentation {
+    width: 4px !important;
+  }
+  
+  /* Spaces rows out, slightly rounds corners */
+  treechildren::-moz-tree-row {
+    min-height: 28px !important;
+    border-radius: 4px;
+  }
 }
