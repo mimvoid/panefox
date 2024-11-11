@@ -2,14 +2,14 @@
  * ./extras/round_ui_items and ./extras/rounded_menupopups.css */
 
 /* Adjust this to change the border radius */
-:root{
+:root {
   --toolbarbutton-border-radius: 10px !important
+;
 }
 
-
 /* Matches the menupopup border radius */
-:root{
-  --uc-menupopup-border-radius: var(--toolbarbutton-border-radius)
+:root {
+  --uc-menupopup-border-radius: var(--toolbarbutton-border-radius);
 }
 
 /* URL & menu bar */
@@ -42,9 +42,8 @@ menupopup,
 /* Misc */
 button,
 .tab-background {
-    border-radius: var(--toolbarbutton-border-radius) !important;
+  border-radius: var(--toolbarbutton-border-radius) !important;
 }
-
 
 /* Rounds the status panel */
 
@@ -52,9 +51,8 @@ button,
  * browser content window */
 
 #statuspanel-label {
-    border-radius: 4px;
+  border-radius: 4px;
 }
-
 
 /* Removes browser content margins from ../extras/browser-rounded.css */
 
@@ -62,9 +60,13 @@ button,
  * which only shows when no content's loaded.
  * Otherwise it'll look weirdly blank. */
 #tabbrowser-tabpanels {
-    browser[type="content"] {
-        margin: 0px !important;
-        border-bottom-right-radius: 0 !important;
-        background-color: color-mix(in srgb, currentColor 2%, transparent) !important;
-    }
+  browser[type="content"] {
+    margin: 0px !important;
+    border-bottom-right-radius: 0 !important;
+    background-color: color-mix(
+      in srgb,
+      currentColor 2%,
+      transparent
+    ) !important;
+  }
 }

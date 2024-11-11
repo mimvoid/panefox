@@ -1,4 +1,4 @@
-/* Targets the URL bar and its tracker icon, site information, etc. */ 
+/* Targets the URL bar and its tracker icon, site information, etc. */
 
 /* Removes borders, increases margins to compensate */
 toolbox {
@@ -7,12 +7,30 @@ toolbox {
   margin-bottom: 2px;
 }
 
-/* Lightens and spaces out identity boxes */
-#identity-box {
-  font-size: small;
-  opacity: 0.6;
+/* Make buttons transleucent until hovered over */
+.urlbar-page-action,
+#identity-box,
+#tracking-protection-icon-container {
+  opacity: 0.25;
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
 }
-#identity-icon-box, #identity-permission-box {
-  margin-left: 1px !important;
-  margin-right: 1px !important;
+
+#nav-bar {
+  height: 2.5rem;
+}
+
+#urlbar-input {
+  margin-left: 4px !important;
+}
+
+#urlbar {
+  text-align: center;
+}
+
+#pageAction-urlbar-tab-stash_condordes_net {
+  display: none;
 }

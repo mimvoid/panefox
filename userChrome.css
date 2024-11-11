@@ -9,6 +9,7 @@
 @import url("./userChrome/status.css");
 @import url("./userChrome/toolbox.css");
 @import url("./userChrome/default-bookmark-icons.css");
+@import url("./userChrome/extensions-menu.css");
 
 /* To return window controls, add:
  * @import url("./extras/window_control_placeholder_support.css");
@@ -17,7 +18,6 @@
 /* For Linux, you can also add:
  * @import url("./extras/window_control_force_linux_system_style.css");
  */
-
 
 /* Windows Controls */
 
@@ -29,17 +29,18 @@
  */
 
 /* Completely hides windows controls */
-.titlebar-min, .titlebar-restore, .titlebar-close {
-    display: none !important;
+.titlebar-min,
+.titlebar-restore,
+.titlebar-close {
+  display: none !important;
 }
-
 
 /* Edit these values to suit your needs */
 
 :root {
   /* The default color used for bookmark icons, both in the toolbar and in the sidebar */
   --bookmark-folder-icon-fill: #ee99a0;
-    
+
   /* The border radius for the browser ui--the higher, the rounder */
-  --toolbarbutton-border-radius: 10px !important;
+  --toolbarbutton-border-radius: 6px !important;
 }

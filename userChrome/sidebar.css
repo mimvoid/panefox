@@ -23,23 +23,32 @@
 
 /* Adjusts the sidebar header */
 #sidebar-header {
+  display: none;
   opacity: 0.75 !important;
   margin-bottom: 4px !important;
-    
+
   > #sidebar-switcher-target {
     margin-left: -4px !important;
-    > #sidebar-icon { margin-right: 4px; }
-    > #sidebar-title { font-size: 14px; }
+    > #sidebar-icon {
+      margin-right: 4px;
+    }
+    > #sidebar-title {
+      font-size: 14px;
+    }
   }
 }
 
 /* TODO: fix this to fit different sidebar title lengths */
 /* Hides sidebar title and switcher arrow according to sidebar width */
 @container (max-width: 84px) {
-  #sidebar-switcher-arrow { visibility: hidden; }
+  #sidebar-switcher-arrow {
+    visibility: hidden;
+  }
 }
 @container (max-width: 72px) {
-  #sidebar-title { visibility: hidden; }
+  #sidebar-title {
+    visibility: hidden;
+  }
 }
 
 /* Shrinks the sidebar splitter */
@@ -61,7 +70,6 @@
   visibility: hidden;
 }
 
-
 /* Sidebar content */
 
 .sidebar-placesTree {
@@ -69,7 +77,7 @@
   treechildren::-moz-tree-indentation {
     width: 4px !important;
   }
-  
+
   /* Spaces rows out, slightly rounds corners */
   treechildren::-moz-tree-row {
     min-height: 28px !important;
